@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>my-music</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let m of music">
+      <ion-label>
+        <h1>{{m.name}}</h1>
+        <p>{{m.duration}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
