@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'my-music',
     loadChildren: () => import('./my-music/my-music.module').then( m => m.MyMusicPageModule)
   },
+  {
+    path: 'create',
+    loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'update/:id',
+    loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
+  },
 ];
 
 @NgModule({

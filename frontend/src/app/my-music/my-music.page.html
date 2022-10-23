@@ -11,6 +11,22 @@
         <h1>{{m.name}}</h1>
         <p>{{m.duration}}</p>
       </ion-label>
-    </ion-item>
-  </ion-list>
+
+  <div class="item-note" item-end>
+    
+    <button ion-button clear (click)="removeMusic(m)">
+      <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+      <ion-label>Delete Music</ion-label>
+    </button>
+    <button ion-button clear [routerLink]="['/update/', m.id]">
+      <ion-icon name="create" style="zoom:1.5"></ion-icon>
+      <ion-label>Update Music</ion-label>
+    </button>
+  </div>
+</ion-item>
+</ion-list>
+<button routerLinkActive="tab-selected" routerLink="/create" tab="create">
+  <ion-icon name="person-outline"></ion-icon>
+  <ion-label>Add Music</ion-label>
+</button>
 </ion-content>
