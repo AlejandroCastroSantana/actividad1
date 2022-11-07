@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@ionic/lab": "^3.2.15"
+  },
+  "dependencies": {
+    "@ionic/storage": "^3.0.6"
   }
 }

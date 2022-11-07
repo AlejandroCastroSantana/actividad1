@@ -41,4 +41,8 @@ export class MyMusicPage implements OnInit {
     }
   }
 
+  addMusic() {
+    this.router.navigateByUrl("/create");
+  }
+
 }

@@ -17,4 +17,8 @@ export class HomePage {
     this.router.navigateByUrl("/my-music")
   }
 
+  gotoLogin() {
+    this.router.navigateByUrl("/login")
+  }
+
 }

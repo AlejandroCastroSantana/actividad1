@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'update/:id',
     loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
 ];
 
 @NgModule({

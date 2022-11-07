@@ -1,10 +1,13 @@
 module.exports = app => {
-    const music = require("../controllers/music.controller.js");
+    const music = require("../controllers/music.controller");
+    var upload = require('../multer/upload');
 
     var router = require("express").Router();
 
-    router.post("/", music.create);
+    // Create a new Music
+    router.post("/", upload.single('file'), music.create);
 
+    // Retrieve all Musics
     router.get("/", music.findAll);
 
     router.get("/:id", music.findOne);

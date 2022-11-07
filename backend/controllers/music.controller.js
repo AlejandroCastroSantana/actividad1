@@ -16,8 +16,9 @@ exports.create = (req, res) => {
     //Create a music
     const music = {
         name: req.body.name,
-        duration: req.body.duration
-    };
+        duration: req.body.duration,
+        filename: req.file ? req.file.filename : ""
+    }
 
     //save music in the database
     Music.create(music)
