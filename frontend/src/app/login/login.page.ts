@@ -4,6 +4,7 @@ import { AlertController } from '@ionic/angular';
 import { YouAreLoggedInPageRoutingModule } from 'src/app/you-are-logged-in/you-are-logged-in-routing.module';
 import { AuthService } from '../autentication/autentication.service';
 import { Usuario } from '../autentication/usuario';
+import { Storage } from '@ionic/storage-angular';
 
 
 @Component({

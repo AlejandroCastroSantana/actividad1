@@ -3,6 +3,7 @@
     "@ionic/lab": "^3.2.15"
   },
   "dependencies": {
-    "@ionic/storage": "^3.0.6"
+    "@ionic/storage": "^3.0.6",
+    "@ionic/storage-angular": "^3.0.6"
   }
 }
