@@ -1,7 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MusicService } from './../services/music.service';
 import { PhotoService } from '../services/photo.service';
 
@@ -52,7 +52,16 @@ export class CreatePage implements OnInit {
     this.capturedPhoto = "";
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.userForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      duration: ['', [Validators.required]]
+    })
+  }
+
+  get errorControl() {
+    return this.userForm.controls;
+  }
 
   onSubmit() {
     if (!this.userForm.valid) {
@@ -62,7 +71,7 @@ export class CreatePage implements OnInit {
         .subscribe((response) => {
           this.zone.run(() => {
             this.userForm.reset();
-            this.router.navigate(['/list']);
+            this.router.navigate(['/my-music']);
           })
         });
     }
